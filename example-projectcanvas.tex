@@ -1,0 +1,40 @@
+% File: example-projectcanvas.tex
+\documentclass{projectcanvas-lualatex}
+\usepackage{lipsum}  % For generating placeholder text
+\usepackage[hidelinks]{hyperref}
+
+
+\begin{document}
+\thispagestyle{empty}   % No page numbering
+
+\header{Fancy Project Name}{%
+\faGlobe \FAspace fancywebsite.tld \sep%
+\faGithub \FAspace \href{https://github.com/org-user/projectname}{org-user/projectname} %
+}{John Doe}{%
+\faEnvelope \FAspace johndoe@gmail.com%
+}
+
+% Flexible column layout (first parameter: left column width, second parameter: right column width)
+\begin{flexcolumns}{0.6\linewidth}{0.4\linewidth}
+
+  % Left column
+  \begin{topicbox}[Zweck / Herausforderung]{boxcolor}
+    \lipsum[1]  % Example content
+  \end{topicbox}
+
+  \begin{topicbox}[Stakeholder / Nutzer]{boxcolor}
+    \lipsum[2]  % Example content
+  \end{topicbox}
+
+  % Right column
+  \begin{topicbox}[Lösung]{boxcolor}
+    Here could be an image or text content.
+  \end{topicbox}
+
+  \begin{topicbox}[Resourcen]{boxcolor}
+    \lipsum[3]  % Example content
+  \end{topicbox}
+
+\end{flexcolumns}
+
+\end{document}
